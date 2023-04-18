@@ -1,22 +1,45 @@
 {
-  "name": "poc-github-gates",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nodesource/poc-github-gates.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nodesource/poc-github-gates/issues"
-  },
-  "homepage": "https://github.com/nodesource/poc-github-gates#readme",
+  "name": "test",
   "dependencies": {
-    "express": "^1.0.0"
+    "aws-sdk": "^2.368.0",
+    "body-parser": "^1.18.3",
+    "byte-size": "^5.0.1",
+    "compression": "^1.7.3",
+    "cookie-parser": "^1.4.3",
+    "db-migrate": "^0.11.4",
+    "db-migrate-pg": "^0.4.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "got": "^9.3.2",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "graphql-type-json": "^0.2.1",
+    "helmet": "^3.15.0",
+    "joi": "^14.3.0",
+    "lru-cache": "^5.1.1",
+    "p-defer": "^1.0.0",
+    "pg": "^8.7.1",
+    "semver": "^5.6.0",
+    "spdx-satisfies": "^4.0.0",
+    "stats-lite": "^2.2.0"
+  },
+  "devDependencies": {
+    "async": "^2.6.1",
+    "autocannon": "^3.2.0",
+    "bole": "^3.0.2",
+    "chalk": "^2.4.1",
+    "client-request": "^2.3.0",
+    "dependency-check": "^3.2.1",
+    "get-port": "^4.0.0",
+    "graphql-request": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.7",
+    "sinon": "^7.1.1",
+    "standard": "^11.0.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1",
+    "uuid": "^3.3.2",
+    "express": "1.0.0"
   }
 }
