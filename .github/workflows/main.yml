@@ -1,0 +1,36 @@
+name: NCM v3
+run-name: NCM Gates
+permissions: read-all
+on: [push]
+jobs:
+  NCM-Report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - name: NCM Report
+        id: report
+        uses: nodesource/ncm-report-github-action@gate
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_job_name: N|S -> NCM Pipeline
+      - name: Annotate
+        run: ./ncm-annotate.sh
+        shell: bash
+  deployment-production:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - name: NCM Report
+        id: report
+        uses: nodesource/ncm-report-github-action@gate
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_job_name: N|S -> NCM Pipeline
+      - name: Annotate
+        run: ./ncm-annotate.sh
+        shell: bash
